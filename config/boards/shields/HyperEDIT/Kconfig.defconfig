@@ -1,0 +1,6 @@
+if SHIELD_HYPEREDIT
+
+config ZMK_KEYBOARD_NAME
+	default "HyperEDIT"
+	
+endif
