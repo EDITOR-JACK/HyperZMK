@@ -3,13 +3,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-/ {
-	behaviors {
-		&lt {
-			flavor = "hold-preferred";
-		};
-	};
+&lt {
+	flavor = "hold-preferred";
+};
 
+/ {
 	keymap {
 		compatible = "zmk,keymap";
 		
