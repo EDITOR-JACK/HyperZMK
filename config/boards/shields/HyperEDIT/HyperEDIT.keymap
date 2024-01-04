@@ -4,9 +4,10 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-
-	&lt {
-		flavor = "hold-preferred";
+	behaviors {
+		&lt {
+			flavor = "hold-preferred";
+		};
 	};
 
 	keymap {
