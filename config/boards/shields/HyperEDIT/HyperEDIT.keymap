@@ -33,7 +33,7 @@
 				&kp LC(F16)	&kp LC(F17)	&kp LC(F18)
 				&kp LC(F19)	&kp LC(F20)	&kp LC(F21)
 				
-				&kp LC(F22)	&sl 4		&none
+				&kp LC(F22)	&mo 4		&none
 			>;
 		};
 		
