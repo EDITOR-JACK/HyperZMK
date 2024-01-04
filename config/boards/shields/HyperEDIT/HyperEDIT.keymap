@@ -8,11 +8,51 @@
 		
 		default_layer {
 			bindings = <
-				&kp KP_N1	&kp KP_N2	&kp KP_N3
-				&kp KP_N4	&kp KP_N5	&kp KP_N6
-				&kp KP_N7	&kp KP_N8	&kp KP_N9
+				&kp F13		&kp F14		&kp F15
+				&kp F16		&kp F17		&kp F18
+				&kp F19		&kp F20		&kp F21
 				
-				&kp KP_MINUS	&kp KP_N0	&kp KP_PLUS
+				&lt 3 F22	&lt 1 F23	&lt 2 F24
+			>;
+		};
+		
+		alt_layer {
+			bindings = <
+				&kp LA(F13)	&kp LA(F14)	&kp LA(F15)
+				&kp LA(F16)	&kp LA(F17)	&kp LA(F18)
+				&kp LA(F19)	&kp LA(F20)	&kp LA(F21)
+				
+				&kp LA(F22)	&none 		&kp LA(F24)
+			>;
+		};
+		
+		ctrl_layer {
+			bindings = <
+				&kp LC(F13)	&kp LC(F14)	&kp LC(F15)
+				&kp LC(F16)	&kp LC(F17)	&kp LC(F18)
+				&kp LC(F19)	&kp LC(F20)	&kp LC(F21)
+				
+				&kp LC(F22)	&sl 4		&none
+			>;
+		};
+		
+		shift_layer {
+			bindings = <
+				&kp LS(F13)	&kp LS(F14)	&kp LS(F15)
+				&kp LS(F16)	&kp LS(F17)	&kp LS(F18)
+				&kp LS(F19)	&kp LS(F20)	&kp LS(F21)
+				
+				&none		&kp LS(F23)	&kp LS(F24)
+			>;
+		};
+		
+		system_layer {
+			bindings = <
+				&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2
+				&bt BT_CLR		&out OUT_USB	&out OUT_BLE
+				&none			&none			&none
+				
+				&bootloader		&none			&none
 			>;
 		};
 	};
