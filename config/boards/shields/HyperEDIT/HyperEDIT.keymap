@@ -8,6 +8,16 @@
 };
 
 / {	
+	combos {
+        compatible = "zmk,combos";
+        combo_exit_gaming {
+            timeout-ms = <50>;
+            key-positions = <4 10 11>;
+			layers = <5>;
+            bindings = <&tog 5>;
+        };
+    };
+
 	keymap {
 		compatible = "zmk,keymap";
 		
