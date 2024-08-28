@@ -54,10 +54,20 @@
 		system_layer {
 			bindings = <
 				&none		&none			&none
-				&none		&none			&none
+				&none		&tog 5			&none
 				&none		&none			&none
 				
 				&bootloader	&none			&none
+			>;
+		};
+
+		gaming_layer {
+			bindings = <
+				&kp Q		&kp W			&kp E
+				&kp A		&kp S			&kp D
+				&kp Z		&kp X			&kp C
+				
+				&kp LSHIFT	&kp LCTRL		&kp SPACE
 			>;
 		};
 	};
