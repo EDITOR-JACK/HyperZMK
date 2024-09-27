@@ -15,7 +15,26 @@
             timeout-ms = <50>;
             key-positions = <4 10 11>;
 			layers = <5>;
-            bindings = <&tog 5>;
+            bindings = <&gaming_mode>;
+        };
+    };
+
+	conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <4>;
+        };
+    };
+
+	macros {
+        gaming_mode: gaming_mode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &tog 5>
+                , <&macro_press &kp LS(LC(LA(G)))>
+                ;
         };
     };
 
@@ -24,61 +43,61 @@
 		
 		default_layer {
 			bindings = <
-				&kp F13		&kp F14		&kp F15
-				&kp F16		&kp F17		&kp F18
-				&kp F19		&kp F20		&kp F21
+				&kp F13			&kp F14			&kp F15
+				&kp F16			&kp F17			&kp F18
+				&kp F19			&kp F20			&kp F21
 				
-				&lt 3 F22	&lt 1 F23	&lt 2 F24
+				&lt 3 F22		&lt 1 F23		&lt 2 F24
 			>;
 		};
 		
-		alt_layer {
+		01_layer {
 			bindings = <
-				&kp LA(F13)	&kp LA(F14)	&kp LA(F15)
-				&kp LA(F16)	&kp LA(F17)	&kp LA(F18)
-				&kp LA(F19)	&kp LA(F20)	&kp LA(F21)
+				&kp LA(F13)		&kp LA(F14)		&kp LA(F15)
+				&kp LA(F16)		&kp LA(F17)		&kp LA(F18)
+				&kp LA(F19)		&kp LA(F20)		&kp LA(F21)
 				
-				&kp LA(F22)	&none 		&mo 4
+				&kp LA(F22)		&none 			&lt 2 LA(F24)
 			>;
 		};
 		
-		ctrl_layer {
+		02_layer {
 			bindings = <
-				&kp LC(F13)	&kp LC(F14)	&kp LC(F15)
-				&kp LC(F16)	&kp LC(F17)	&kp LC(F18)
-				&kp LC(F19)	&kp LC(F20)	&kp LC(F21)
+				&kp LC(F13)		&kp LC(F14)		&kp LC(F15)
+				&kp LC(F16)		&kp LC(F17)		&kp LC(F18)
+				&kp LC(F19)		&kp LC(F20)		&kp LC(F21)
 				
-				&kp LC(F22)	&mo 4		&none
+				&kp LC(F22)		&lt 1 LC(F23)	&none
 			>;
 		};
 		
-		shift_layer {
+		03_layer {
 			bindings = <
-				&kp LS(F13)	&kp LS(F14)	&kp LS(F15)
-				&kp LS(F16)	&kp LS(F17)	&kp LS(F18)
-				&kp LS(F19)	&kp LS(F20)	&mkp RCLK
+				&kp LS(F13)		&kp LS(F14)		&kp LS(F15)
+				&kp LS(F16)		&kp LS(F17)		&kp LS(F18)
+				&kp LS(F19)		&kp LS(F20)		&mkp RCLK
 				
-				&none		&kp LS(F23)	&kp LS(F24)
+				&none			&kp LS(F23)		&kp LS(F24)
 			>;
 		};
 		
-		system_layer {
+		04_system_layer {
 			bindings = <
-				&none		&none			&none
-				&none		&tog 5			&none
-				&none		&none			&none
+				&none			&none			&none
+				&none			&gaming_mode	&none
+				&none			&none			&none
 				
-				&bootloader	&none			&none
+				&bootloader		&none			&none
 			>;
 		};
 
-		gaming_layer {
+		05_gaming_layer {
 			bindings = <
-				&kp Q		&kp W			&kp E
-				&kp A		&kp S			&kp D
-				&kp Z		&kp X			&kp C
+				&kp Q			&kp W			&kp E
+				&kp A			&kp S			&kp D
+				&kp Z			&kp X			&kp C
 				
-				&kp LSHIFT	&kp LCTRL		&kp SPACE
+				&kp LSHIFT		&kp LCTRL		&kp SPACE
 			>;
 		};
 	};
