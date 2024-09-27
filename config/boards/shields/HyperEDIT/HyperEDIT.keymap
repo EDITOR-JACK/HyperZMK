@@ -32,8 +32,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &tog 5>
-                , <&macro_press &kp LS(LC(LA(G)))>
+                = <&tog 5>
+                , <&kp LS(LC(LA(G)))>
                 ;
         };
     };
