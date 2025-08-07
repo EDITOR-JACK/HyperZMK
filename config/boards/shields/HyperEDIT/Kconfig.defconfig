@@ -2,7 +2,5 @@ if SHIELD_HYPEREDIT
 
 config ZMK_KEYBOARD_NAME
 	default "HyperEDIT"
-
-CONFIG_ZMK_POINTING=y
 	
 endif
